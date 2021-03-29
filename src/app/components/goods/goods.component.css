@@ -1,0 +1,15 @@
+form,
+h2 {
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+
+form input {
+
+    width: 500px;
+}
+
+form input[type="submit"] {
+    width: 95px;
+}

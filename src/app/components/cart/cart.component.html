@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Total</th>
+            <th scope="col">Options</th>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let good of cart; index as i">
+                <td>{{good.name}}</td>
+                <td>{{good.price | currency}}</td>
+                <td>
+                    <input type="number" placeholder="Amount (Kg)" [(ngModel)]="good.amount">
+                </td>
+    
+                <td>{{good.price * good.amount | currency}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="save(i)">Save</button>
+                    <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
